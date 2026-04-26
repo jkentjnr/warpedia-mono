@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Buttons</title>
+<link rel="stylesheet" href="../colors_and_type.css" />
+<style>body{margin:0;padding:22px;background:var(--paper);}
+.row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:12px;align-items:center;}
+.lbl{font-family:var(--mono);font-size:11px;color:var(--ink-3);width:90px;}
+</style></head>
+<body>
+  <div class="row"><span class="lbl">primary</span>
+    <button class="wp-btn wp-btn-primary">Submit for review</button>
+    <button class="wp-btn wp-btn-primary wp-btn-sm">Save</button>
+    <button class="wp-btn wp-btn-primary" disabled>Disabled</button>
+  </div>
+  <div class="row"><span class="lbl">secondary</span>
+    <button class="wp-btn wp-btn-secondary">Save draft</button>
+    <button class="wp-btn wp-btn-ghost">Cancel</button>
+  </div>
+  <div class="row"><span class="lbl">link</span>
+    <a class="wp-btn-link" href="#">Browse all items →</a>
+  </div>
+</body></html>

@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Top bar</title>
+<link rel="stylesheet" href="../colors_and_type.css" />
+<style>body{margin:0;padding:0;background:var(--paper);}
+.bar{height:54px;display:flex;align-items:center;padding:0 18px;gap:20px;border-bottom:1px solid var(--ink-rule);background:var(--paper);}
+.logo{height:30px;}
+.nav{display:flex;gap:18px;font-family:var(--sans);font-size:14px;color:var(--ink-2);}
+.nav a{color:var(--ink-2);text-decoration:none;}
+.nav a:hover{color:var(--oxide);}
+.search{flex:1;max-width:340px;}
+.search input{height:32px;padding:0 10px;border:1px solid var(--ink-rule-2);background:var(--paper);width:100%;font-family:var(--sans);font-size:13px;border-radius:2px;}
+.right{margin-left:auto;display:flex;gap:8px;align-items:center;}
+</style></head>
+<body>
+  <div class="bar">
+    <img class="logo" src="../assets/logo/warpedia-wordmark.svg" alt="Warpedia" />
+    <div class="nav">
+      <a href="#">Browse</a>
+      <a href="#">Themes</a>
+      <a href="#">Conflicts</a>
+      <a href="#">About</a>
+    </div>
+    <div class="search"><input placeholder="Search items, people, places, units…" /></div>
+    <div class="right">
+      <a href="#" class="nav" style="font-size:14px">Sign in</a>
+      <button class="wp-btn wp-btn-primary wp-btn-sm">Contribute</button>
+    </div>
+  </div>
+</body></html>

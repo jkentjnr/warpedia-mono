@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Radii & Shadow</title>
+<link rel="stylesheet" href="../colors_and_type.css" />
+<style>body{margin:0;padding:22px;background:var(--paper);}
+.row{display:flex;gap:14px;margin-bottom:14px;align-items:flex-end;}
+.box{width:84px;height:54px;background:var(--paper-3);display:flex;align-items:flex-end;padding:6px;}
+.lbl{font-family:var(--mono);font-size:11px;color:var(--ink-3);}
+.shadow1{box-shadow:var(--shadow-floating);background:var(--paper);}
+.shadow2{box-shadow:var(--shadow-modal);background:var(--paper);}
+</style></head>
+<body>
+  <div class="row">
+    <div class="box" style="border-radius:0"><span class="lbl">r-0 · 0px</span></div>
+    <div class="box" style="border-radius:2px"><span class="lbl">r-1 · 2px</span></div>
+    <div class="box" style="border-radius:4px"><span class="lbl">r-2 · 4px</span></div>
+    <div class="box" style="border-radius:999px"><span class="lbl">pill</span></div>
+  </div>
+  <div class="row">
+    <div class="box shadow1"><span class="lbl">floating</span></div>
+    <div class="box shadow2"><span class="lbl">modal</span></div>
+  </div>
+</body></html>
