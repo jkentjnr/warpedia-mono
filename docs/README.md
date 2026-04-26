@@ -1,0 +1,29 @@
+# Warpedia — docs
+
+Foundational research and design notes for warpedia.org — an open, primary-source-rich, encyclopedic resource for the human record of war. A war-specific peer to Wikipedia and the broader Wikimedia ecosystem.
+
+## Contents
+
+**Anchor**
+- [`charter.md`](charter.md) — what warpedia is, what it is not, and the principles all other decisions must align to. Read this first.
+
+**Research**
+- [`research/landscape-and-viability.md`](research/landscape-and-viability.md) — what already exists, where the gaps are, and an honest assessment of whether warpedia.org has room to exist.
+- [`research/source-licensing.md`](research/source-licensing.md) — what content from existing archives can lawfully be absorbed, under what licenses, with what caveats.
+- [`research/manuals-and-reference.md`](research/manuals-and-reference.md) — adds technical / reference material (pilot's notes, field manuals, after-action reports) as a second content dimension alongside personal narrative.
+- [`research/content-dimensions.md`](research/content-dimensions.md) — comprehensive map of all content dimensions: casualty/commemoration, geospatial, propaganda, war art, POW/internment, war crimes, intelligence, treaties, underrepresented voices, etc.
+
+**Design**
+- [`data-model.md`](data-model.md) — first-cut entity model (Item, Person, Conflict, Event, Unit, Place, Collection, Contribution, Award, Cemetery, Camp, Memorial, Theme, Trial, Treaty).
+- [`metadata/dublin-core-profile.md`](metadata/dublin-core-profile.md) — formal Dublin Core Application Profile: which DCMI terms warpedia uses, with what cardinality and crosswalks (EDM, IIIF, schema.org).
+- [`metadata/taxonomies.md`](metadata/taxonomies.md) — controlled vocabularies referenced by the profile: item types, roles, conflicts, theatres, place types, rights statements, status.
+
+**Infrastructure**
+- [`infrastructure/storage.md`](infrastructure/storage.md) — four-tier storage architecture: self-owned deep archive (Glacier), warm working master (B2), CDN-fronted hot tier (R2), and free public-preservation mirrors (Internet Archive, Wikimedia Commons). With cost projections and a worked end-to-end example.
+
+**Process**
+- [`process/contribution-flow.md`](process/contribution-flow.md) — end-to-end contribution flow: who can contribute what, the screen-by-screen UX walkthrough, the technical pipeline behind submit, editorial review, sensitive-material handling, and abuse mitigations.
+
+## Status
+
+Pre-build research and design phase. No implementation yet.
