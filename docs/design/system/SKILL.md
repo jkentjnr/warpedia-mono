@@ -4,23 +4,23 @@
 
 A free, primary-source archive and encyclopedia of war — letters, diaries, photographs, oral histories, documents, objects — reviewed and openly licensed. **Voice: encyclopedic and serious.** Not chirpy. Not "AI-powered ✨". Not cinematic.
 
-Read [README.md](docs/design/system/README.md) and (if relevant) [docs/charter.md](docs/charter.md) before designing anything.
+Read [README.md](docs/design/system/README.md) and (if relevant) [docs/charter.md](docs/charter.md) before designing anything. The rendered system is live at [jkentjnr.github.io/warpedia-mono](https://jkentjnr.github.io/warpedia-mono/).
 
 ## Files in this project
 
 | Where | What |
 |---|---|
-| [colors_and_type.css](docs/design/system/colors_and_type.css) | All design tokens — colors, type, spacing, components. **Always link this in `<head>`.** |
-| [assets/logo/](docs/design/system/assets/logo/) | Wordmark + mark (accession-tag style). Don't redraw — link the SVGs ([wordmark](docs/design/system/assets/logo/warpedia-wordmark.svg), [mark](docs/design/system/assets/logo/warpedia-mark.svg)). |
+| [colors_and_type.css](https://jkentjnr.github.io/warpedia-mono/design/system/colors_and_type.css) | All design tokens — colors, type, spacing, components. **Always link this in `<head>`.** Source: [docs/design/system/colors_and_type.css](docs/design/system/colors_and_type.css). |
+| [assets/logo/](docs/design/system/assets/logo/) | Wordmark + mark (accession-tag style). Don't redraw — link the SVGs ([wordmark ↗](https://jkentjnr.github.io/warpedia-mono/design/system/assets/logo/warpedia-wordmark.svg), [mark ↗](https://jkentjnr.github.io/warpedia-mono/design/system/assets/logo/warpedia-mark.svg)). |
 | [fonts/](docs/design/system/fonts/) | Source Serif 4 (TTF, variable). Geist + JetBrains Mono load from Google Fonts. |
-| [ui_kits/website/](docs/design/system/ui_kits/website/) | Public reading site (warpedia.org) — hero, browse, item view, article. |
-| [ui_kits/contribute/](docs/design/system/ui_kits/contribute/) | Sarah's 12-screen contribution flow. |
-| [ui_kits/editorial/](docs/design/system/ui_kits/editorial/) | Editor workbench — queue + detail rail. |
-| [preview/](docs/design/system/preview/) | Design-system review cards (color, type, components). |
+| [ui_kits/website/](https://jkentjnr.github.io/warpedia-mono/design/system/ui_kits/website/) | Public reading site (warpedia.org) — hero, browse, item view, article. |
+| [ui_kits/contribute/](https://jkentjnr.github.io/warpedia-mono/design/system/ui_kits/contribute/) | Sarah's 12-screen contribution flow. |
+| [ui_kits/editorial/](https://jkentjnr.github.io/warpedia-mono/design/system/ui_kits/editorial/) | Editor workbench — queue + detail rail. |
+| [preview/](docs/design/system/preview/) | Design-system review cards (color, type, components). Browse them via the [landing page](https://jkentjnr.github.io/warpedia-mono/#previews). |
 
 ## When the user asks for a new screen, page, or surface
 
-1. Check [ui_kits/](docs/design/system/ui_kits/) for the closest existing surface — the [contribution flow](docs/design/system/ui_kits/contribute/), the [editor's queue](docs/design/system/ui_kits/editorial/), or a [public reading page](docs/design/system/ui_kits/website/). Lift the chrome from there.
+1. Check the rendered kits for the closest existing surface — the [contribution flow ↗](https://jkentjnr.github.io/warpedia-mono/design/system/ui_kits/contribute/), the [editor's queue ↗](https://jkentjnr.github.io/warpedia-mono/design/system/ui_kits/editorial/), or a [public reading page ↗](https://jkentjnr.github.io/warpedia-mono/design/system/ui_kits/website/). Lift the chrome from there. Source folders: [ui_kits/](docs/design/system/ui_kits/).
 2. Re-use components by class name. The CSS tokenfile already has: `.wp-topbar`, `.wp-tab(-active)`, `.wp-btn(-primary|-secondary|-ghost)(-sm|-lg)`, `.wp-input`, `.wp-textarea`, `.wp-select`, `.wp-label`, `.wp-help`, `.wp-table`, `.wp-meta-table`, `.wp-rule`, `.wp-prose`, `.wp-status-*`, `.wp-badge-*`, `.wp-display-xl|-l|-m`, `.wp-h1|-h2|-h3`, `.wp-meta`, `.wp-caption`.
 3. Type comes from CSS vars `--serif` (Source Serif 4 — display + body), `--sans` (Geist — UI, metadata), `--mono` (JetBrains Mono — IDs, slugs, code).
 4. Color comes from semantic vars: `--paper`, `--paper-2`, `--paper-3`, `--ink`, `--ink-2`, `--ink-3`, `--ink-4`, `--ink-rule`, `--ink-rule-2`, `--oxide` (only links / key actions / "live"), `--verdigris` (only "approved"), `--iron` (info), `--caution` (AI / sensitivity), `--error` (rejected). Tints: `--*-tint` for backgrounds.
@@ -61,7 +61,7 @@ ui_kits/<surface>/
   README.md         # one paragraph: what this surface is for, where the spec lives
 ```
 
-Use the React 18.3.1 + Babel 7.29 pinned script tags from [ui_kits/website/index.html](docs/design/system/ui_kits/website/index.html). Expose components on `window` so multi-file Babel scripts can share scope.
+Use the React 18.3.1 + Babel 7.29 pinned script tags from [ui_kits/website/index.html](docs/design/system/ui_kits/website/index.html) (live: [open ↗](https://jkentjnr.github.io/warpedia-mono/design/system/ui_kits/website/)). Expose components on `window` so multi-file Babel scripts can share scope.
 
 ## When in doubt
 

@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Warpedia · design system</title>
+<meta name="description" content="Pre-build design system and UI kit prototypes for warpedia.org — an open, primary-source-rich, encyclopedic resource for the human record of war." />
+<link rel="icon" type="image/svg+xml" href="design/system/assets/logo/warpedia-mark.svg" />
+<link rel="stylesheet" href="design/system/colors_and_type.css" />
+<style>
+  body { background: var(--paper); }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 var(--sp-6); }
+  .topbar {
+    display: flex; align-items: center; justify-content: space-between;
+    height: 54px; border-bottom: var(--rule);
+    background: var(--paper);
+  }
+  .topbar img { height: 22px; display: block; }
+  .topbar nav { display: flex; gap: var(--sp-5); font-family: var(--sans); font-size: var(--fs-body-s); }
+  .topbar nav a { color: var(--ink-2); text-decoration: none; }
+  .topbar nav a:hover { color: var(--oxide); text-decoration: underline; text-underline-offset: 3px; }
+
+  .hero { padding: var(--sp-9) 0 var(--sp-7) 0; }
+  .hero .kicker {
+    font-family: var(--sans); font-size: var(--fs-caption);
+    text-transform: uppercase; letter-spacing: 0.08em;
+    color: var(--ink-3); margin-bottom: var(--sp-3);
+  }
+  .hero h1 { margin: 0 0 var(--sp-4) 0; }
+  .hero p { max-width: 64ch; color: var(--ink-2); }
+
+  section { padding: var(--sp-7) 0; border-top: var(--rule); }
+  section > h2 { margin-top: 0; }
+  section > .lede {
+    color: var(--ink-3); font-family: var(--sans); font-size: var(--fs-body-s);
+    max-width: 64ch; margin: 0 0 var(--sp-6) 0;
+  }
+
+  .kit-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: var(--sp-5);
+  }
+  .kit {
+    display: block; padding: var(--sp-5);
+    background: var(--paper-2);
+    border-radius: var(--radius-square);
+    text-decoration: none; color: inherit;
+    transition: background var(--motion-fast) var(--ease);
+  }
+  .kit:hover { background: var(--paper-3); }
+  .kit .label {
+    font-family: var(--sans); font-size: var(--fs-caption);
+    text-transform: uppercase; letter-spacing: 0.08em;
+    color: var(--ink-3); margin-bottom: var(--sp-2);
+  }
+  .kit .title {
+    font-family: var(--serif); font-size: 22px; line-height: 30px;
+    color: var(--ink); margin: 0 0 var(--sp-2) 0; letter-spacing: -0.01em;
+  }
+  .kit .desc {
+    font-family: var(--sans); font-size: var(--fs-body-s); line-height: var(--lh-body-s);
+    color: var(--ink-2); margin: 0 0 var(--sp-3) 0;
+  }
+  .kit .links {
+    font-family: var(--sans); font-size: var(--fs-meta);
+    color: var(--ink-3); display: flex; gap: var(--sp-3); flex-wrap: wrap;
+  }
+  .kit .links a { color: var(--ink-3); text-decoration: underline; text-underline-offset: 3px; }
+  .kit .links a:hover { color: var(--oxide); }
+
+  .preview-table {
+    width: 100%; border-collapse: collapse;
+    font-family: var(--sans); font-size: var(--fs-body-s);
+  }
+  .preview-table th, .preview-table td {
+    text-align: left; padding: var(--sp-3) var(--sp-4);
+    border-bottom: var(--rule); vertical-align: top;
+  }
+  .preview-table th {
+    width: 200px; color: var(--ink-3); font-weight: 500;
+    font-family: var(--sans); font-size: var(--fs-caption);
+    text-transform: uppercase; letter-spacing: 0.08em;
+  }
+  .preview-table td a { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
+  .preview-table td a:hover { color: var(--oxide); }
+  .preview-table td .sep { color: var(--ink-4); margin: 0 var(--sp-2); }
+
+  .ref-list { list-style: none; padding: 0; margin: 0; }
+  .ref-list li {
+    padding: var(--sp-3) 0; border-bottom: var(--rule);
+    font-family: var(--sans); font-size: var(--fs-body-s);
+  }
+  .ref-list li:last-child { border-bottom: 0; }
+  .ref-list a { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
+  .ref-list a:hover { color: var(--oxide); }
+  .ref-list .meta { color: var(--ink-3); margin-left: var(--sp-2); }
+
+  footer {
+    padding: var(--sp-6) 0 var(--sp-8) 0;
+    border-top: var(--rule);
+    font-family: var(--sans); font-size: var(--fs-meta); color: var(--ink-3);
+    display: flex; justify-content: space-between; flex-wrap: wrap; gap: var(--sp-4);
+  }
+  footer a { color: var(--ink-3); text-decoration: underline; text-underline-offset: 3px; }
+  footer a:hover { color: var(--oxide); }
+
+  .notice {
+    background: var(--iron-tint); color: var(--iron-deep);
+    padding: var(--sp-3) var(--sp-4); border-radius: var(--radius-2);
+    font-family: var(--sans); font-size: var(--fs-meta);
+    margin-bottom: var(--sp-6);
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap topbar">
+  <a href="./" aria-label="Warpedia"><img src="design/system/assets/logo/warpedia-wordmark.svg" alt="Warpedia" /></a>
+  <nav>
+    <a href="#kits">UI kits</a>
+    <a href="#previews">Tokens</a>
+    <a href="#reference">Reference</a>
+    <a href="https://github.com/jkentjnr/warpedia-mono">Source</a>
+  </nav>
+</div>
+
+<main class="wrap">
+
+  <section class="hero" style="border-top: 0;">
+    <div class="kicker">Pre-build · research and design phase</div>
+    <h1 class="wp-display-l">Warpedia design system</h1>
+    <p class="wp-prose">
+      Visual and interaction system for <strong>warpedia.org</strong> — an open, primary-source-rich,
+      encyclopedic resource for the human record of war. The pages below are interactive prototypes
+      built from the project's specification documents. No production code exists yet; the site has
+      not launched.
+    </p>
+  </section>
+
+  <section id="kits">
+    <h2 class="wp-h2">UI kit prototypes</h2>
+    <p class="lede">
+      Three surfaces, each rendered as a static React prototype. Click anything inside —
+      navigation is page-internal.
+    </p>
+
+    <div class="kit-grid">
+      <a class="kit" href="design/system/ui_kits/website/index.html">
+        <div class="label">Surface 01</div>
+        <div class="title">Public website</div>
+        <p class="desc">Reading and browsing surface for warpedia.org. Home, browse, item view, article.</p>
+        <div class="links">
+          <span>Open prototype →</span>
+        </div>
+      </a>
+
+      <a class="kit" href="design/system/ui_kits/contribute/index.html">
+        <div class="label">Surface 02</div>
+        <div class="title">Contribution flow</div>
+        <p class="desc">Sarah's twelve-screen flow for submitting a primary source. License wizard, AI transcription, review hand-off.</p>
+        <div class="links">
+          <span>Open prototype →</span>
+        </div>
+      </a>
+
+      <a class="kit" href="design/system/ui_kits/editorial/index.html">
+        <div class="label">Surface 03</div>
+        <div class="title">Editorial review</div>
+        <p class="desc">Curator workbench. Triage queue with detail rail, checklist, decision actions, activity log.</p>
+        <div class="links">
+          <span>Open prototype →</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <section id="previews">
+    <h2 class="wp-h2">Token and component previews</h2>
+    <p class="lede">
+      Static HTML cards demonstrating each token group and component family in isolation.
+      Useful when reviewing a specific decision rather than a whole surface.
+    </p>
+
+    <table class="preview-table">
+      <tbody>
+        <tr>
+          <th>Colors</th>
+          <td>
+            <a href="design/system/preview/colors-paper.html">paper</a><span class="sep">·</span>
+            <a href="design/system/preview/colors-ink.html">ink</a><span class="sep">·</span>
+            <a href="design/system/preview/colors-accents.html">accents</a>
+          </td>
+        </tr>
+        <tr>
+          <th>Type</th>
+          <td>
+            <a href="design/system/preview/type-display.html">display</a><span class="sep">·</span>
+            <a href="design/system/preview/type-headings.html">headings</a><span class="sep">·</span>
+            <a href="design/system/preview/type-body.html">body</a><span class="sep">·</span>
+            <a href="design/system/preview/type-meta-mono.html">meta + mono</a>
+          </td>
+        </tr>
+        <tr>
+          <th>Spacing &amp; shape</th>
+          <td>
+            <a href="design/system/preview/spacing-scale.html">spacing scale</a><span class="sep">·</span>
+            <a href="design/system/preview/radii-shadow.html">radii + shadow</a>
+          </td>
+        </tr>
+        <tr>
+          <th>Components</th>
+          <td>
+            <a href="design/system/preview/components-buttons.html">buttons</a><span class="sep">·</span>
+            <a href="design/system/preview/components-inputs.html">inputs</a><span class="sep">·</span>
+            <a href="design/system/preview/components-badges.html">badges</a><span class="sep">·</span>
+            <a href="design/system/preview/components-topbar.html">topbar</a><span class="sep">·</span>
+            <a href="design/system/preview/components-item-row.html">item row</a><span class="sep">·</span>
+            <a href="design/system/preview/components-catalogue-card.html">catalogue card</a>
+          </td>
+        </tr>
+        <tr>
+          <th>Brand</th>
+          <td>
+            <a href="design/system/preview/logo.html">logo / mark</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="reference">
+    <h2 class="wp-h2">Reference</h2>
+    <p class="lede">
+      The design system derives from the project's specification documents.
+      They live in the same repository and are best read on GitHub.
+    </p>
+
+    <ul class="ref-list">
+      <li>
+        <a href="https://github.com/jkentjnr/warpedia-mono/blob/main/docs/design/system/README.md">Design system README</a>
+        <span class="meta">— brand context, content fundamentals, visual foundations, iconography.</span>
+      </li>
+      <li>
+        <a href="https://github.com/jkentjnr/warpedia-mono/blob/main/docs/design/system/SKILL.md">SKILL.md</a>
+        <span class="meta">— the working agreement; what to lift, what to avoid.</span>
+      </li>
+      <li>
+        <a href="https://github.com/jkentjnr/warpedia-mono/blob/main/docs/charter.md">Project charter</a>
+        <span class="meta">— what Warpedia is and is not. The anchor.</span>
+      </li>
+      <li>
+        <a href="https://github.com/jkentjnr/warpedia-mono/blob/main/docs/data-model.md">Data model</a>
+        <span class="meta">— Item, Person, Conflict, Event, Unit, Place, Collection, Equipment, Theme, Trial, Treaty.</span>
+      </li>
+      <li>
+        <a href="https://github.com/jkentjnr/warpedia-mono/blob/main/docs/process/contribution-flow.md">Contribution flow specification</a>
+        <span class="meta">— source for the 12-screen contribute prototype.</span>
+      </li>
+      <li>
+        <a href="https://github.com/jkentjnr/warpedia-mono/blob/main/docs/metadata/dublin-core-profile.md">Dublin Core application profile</a>
+        <span class="sep">·</span>
+        <a href="https://github.com/jkentjnr/warpedia-mono/blob/main/docs/metadata/taxonomies.md">taxonomies</a>
+      </li>
+      <li>
+        <a href="https://github.com/jkentjnr/warpedia-mono/blob/main/docs/infrastructure/storage.md">Storage architecture</a>
+      </li>
+      <li>
+        <a href="https://github.com/jkentjnr/warpedia-mono/tree/main/docs/research">Research</a>
+        <span class="meta">— landscape, source-licensing, manuals, content dimensions.</span>
+      </li>
+    </ul>
+  </section>
+
+</main>
+
+<div class="wrap">
+  <footer>
+    <div>Pre-build research and design phase. The site has not launched.</div>
+    <div><a href="https://github.com/jkentjnr/warpedia-mono">jkentjnr/warpedia-mono</a></div>
+  </footer>
+</div>
+
+</body>
+</html>

@@ -2,6 +2,8 @@
 
 > Visual + interaction system for **warpedia.org** — an open, primary-source-rich, encyclopedic resource for the human record of war.
 
+**Live preview:** [jkentjnr.github.io/warpedia-mono](https://jkentjnr.github.io/warpedia-mono/) — landing page with links to every UI kit prototype and token preview, served from `/docs` via GitHub Pages.
+
 This system supports a Wikipedia/Wikimedia-adjacent project covering battles, conflicts, equipment, units, places, and the people (military and civilian) who lived through them. Primary sources — letters, diaries, photographs, oral histories, manuals, after-action reports, war art — are first-class published items, not "supporting evidence". Encyclopedic articles sit alongside them. Multi-conflict, multi-national, multi-perspective by design.
 
 **What Warpedia is not:** a memorial / tribute site; a genealogy platform; an opinion forum; a defence-industry / current-operations resource. The visual language must reinforce *all* of those negatives: it must read as a **scholarly archive**, not a war-themed product, a memorial site, or a hobbyist wiki.
@@ -29,39 +31,39 @@ The user attached the documentation monorepo `jkentjnr/warpedia-mono`. There is 
 |---|---|
 | [README.md](docs/design/system/README.md) | This file. Brand context, content & visual fundamentals, iconography. |
 | [SKILL.md](docs/design/system/SKILL.md) | Skill manifest — for use as a portable Claude Skill. |
-| [colors_and_type.css](docs/design/system/colors_and_type.css) | All design tokens (color, type, spacing, radius, shadow, motion) as CSS custom properties + semantic element styles. |
+| [colors_and_type.css](https://jkentjnr.github.io/warpedia-mono/design/system/colors_and_type.css) | All design tokens (color, type, spacing, radius, shadow, motion) as CSS custom properties + semantic element styles. |
 | [fonts/](docs/design/system/fonts/) | Web fonts (Source Serif 4, Geist, JetBrains Mono). |
 | [assets/](docs/design/system/assets/) | Logos, marks, sample primary-source imagery, icon sets. |
 | [preview/](docs/design/system/preview/) | Design-system preview cards (Type, Colors, Spacing, Components, Brand). |
-| [ui_kits/website/](docs/design/system/ui_kits/website/) | Public marketing + reading site UI kit (`warpedia.org`). |
-| [ui_kits/contribute/](docs/design/system/ui_kits/contribute/) | Contribution-flow UI kit (Sarah's 12 screens). |
-| [ui_kits/editorial/](docs/design/system/ui_kits/editorial/) | Editorial review queue UI kit (the editor's workbench). |
+| [ui_kits/website/](https://jkentjnr.github.io/warpedia-mono/design/system/ui_kits/website/) | Public marketing + reading site UI kit (`warpedia.org`). |
+| [ui_kits/contribute/](https://jkentjnr.github.io/warpedia-mono/design/system/ui_kits/contribute/) | Contribution-flow UI kit (Sarah's 12 screens). |
+| [ui_kits/editorial/](https://jkentjnr.github.io/warpedia-mono/design/system/ui_kits/editorial/) | Editorial review queue UI kit (the editor's workbench). |
 
 ### Preview pages
 
-Open any of these in a browser to see the live token / component sample:
+Each preview is a self-contained HTML card served live from GitHub Pages — open one to see the rendered tokens / components.
 
 | Topic | Files |
 |---|---|
-| Colors | [paper](docs/design/system/preview/colors-paper.html) · [ink](docs/design/system/preview/colors-ink.html) · [accents](docs/design/system/preview/colors-accents.html) |
-| Type | [display](docs/design/system/preview/type-display.html) · [headings](docs/design/system/preview/type-headings.html) · [body](docs/design/system/preview/type-body.html) · [meta + mono](docs/design/system/preview/type-meta-mono.html) |
-| Spacing & shape | [spacing scale](docs/design/system/preview/spacing-scale.html) · [radii + shadow](docs/design/system/preview/radii-shadow.html) |
-| Components | [buttons](docs/design/system/preview/components-buttons.html) · [inputs](docs/design/system/preview/components-inputs.html) · [badges](docs/design/system/preview/components-badges.html) · [topbar](docs/design/system/preview/components-topbar.html) · [item row](docs/design/system/preview/components-item-row.html) · [catalogue card](docs/design/system/preview/components-catalogue-card.html) |
-| Brand | [logo / mark](docs/design/system/preview/logo.html) |
+| Colors | [paper](https://jkentjnr.github.io/warpedia-mono/design/system/preview/colors-paper.html) · [ink](https://jkentjnr.github.io/warpedia-mono/design/system/preview/colors-ink.html) · [accents](https://jkentjnr.github.io/warpedia-mono/design/system/preview/colors-accents.html) |
+| Type | [display](https://jkentjnr.github.io/warpedia-mono/design/system/preview/type-display.html) · [headings](https://jkentjnr.github.io/warpedia-mono/design/system/preview/type-headings.html) · [body](https://jkentjnr.github.io/warpedia-mono/design/system/preview/type-body.html) · [meta + mono](https://jkentjnr.github.io/warpedia-mono/design/system/preview/type-meta-mono.html) |
+| Spacing & shape | [spacing scale](https://jkentjnr.github.io/warpedia-mono/design/system/preview/spacing-scale.html) · [radii + shadow](https://jkentjnr.github.io/warpedia-mono/design/system/preview/radii-shadow.html) |
+| Components | [buttons](https://jkentjnr.github.io/warpedia-mono/design/system/preview/components-buttons.html) · [inputs](https://jkentjnr.github.io/warpedia-mono/design/system/preview/components-inputs.html) · [badges](https://jkentjnr.github.io/warpedia-mono/design/system/preview/components-badges.html) · [topbar](https://jkentjnr.github.io/warpedia-mono/design/system/preview/components-topbar.html) · [item row](https://jkentjnr.github.io/warpedia-mono/design/system/preview/components-item-row.html) · [catalogue card](https://jkentjnr.github.io/warpedia-mono/design/system/preview/components-catalogue-card.html) |
+| Brand | [logo / mark](https://jkentjnr.github.io/warpedia-mono/design/system/preview/logo.html) |
 
 ### UI kit prototypes
 
-Each kit has an interactive `index.html` (React + Babel pinned via CDN) and a `components.jsx` source:
+Each kit ships an interactive `index.html` (React + Babel pinned via CDN) served live from Pages, plus a `components.jsx` source on GitHub:
 
-- **Website** — [index.html](docs/design/system/ui_kits/website/index.html) · [components.jsx](docs/design/system/ui_kits/website/components.jsx) · [README](docs/design/system/ui_kits/website/README.md)
-- **Contribute** — [index.html](docs/design/system/ui_kits/contribute/index.html) · [components.jsx](docs/design/system/ui_kits/contribute/components.jsx) · [README](docs/design/system/ui_kits/contribute/README.md)
-- **Editorial** — [index.html](docs/design/system/ui_kits/editorial/index.html) · [components.jsx](docs/design/system/ui_kits/editorial/components.jsx) · [README](docs/design/system/ui_kits/editorial/README.md)
+- **Website** — [open prototype ↗](https://jkentjnr.github.io/warpedia-mono/design/system/ui_kits/website/) · [components.jsx](docs/design/system/ui_kits/website/components.jsx) · [README](docs/design/system/ui_kits/website/README.md)
+- **Contribute** — [open prototype ↗](https://jkentjnr.github.io/warpedia-mono/design/system/ui_kits/contribute/) · [components.jsx](docs/design/system/ui_kits/contribute/components.jsx) · [README](docs/design/system/ui_kits/contribute/README.md)
+- **Editorial** — [open prototype ↗](https://jkentjnr.github.io/warpedia-mono/design/system/ui_kits/editorial/) · [components.jsx](docs/design/system/ui_kits/editorial/components.jsx) · [README](docs/design/system/ui_kits/editorial/README.md)
 
 ### Brand assets
 
-- [warpedia-wordmark.svg](docs/design/system/assets/logo/warpedia-wordmark.svg) — full wordmark
-- [warpedia-mark.svg](docs/design/system/assets/logo/warpedia-mark.svg) — accession-tag mark
-- Reference screenshots: [website-home.png](docs/design/system/screenshots/website-home.png) · [logo iterations](docs/design/system/screenshots/)
+- [warpedia-wordmark.svg](https://jkentjnr.github.io/warpedia-mono/design/system/assets/logo/warpedia-wordmark.svg) — full wordmark
+- [warpedia-mark.svg](https://jkentjnr.github.io/warpedia-mono/design/system/assets/logo/warpedia-mark.svg) — accession-tag mark
+- Reference screenshots: [website-home.png](https://jkentjnr.github.io/warpedia-mono/design/system/screenshots/website-home.png) · [logo iterations](docs/design/system/screenshots/)
 
 ---
 
@@ -252,7 +254,7 @@ Warpedia inherits **no icon system** from the source repo (it's docs-only). The 
 - **No emoji as icons.** Anywhere. Ever.
 - **Unicode marks** used where conventional: `†` (KIA / death date), `§` (section), `№` (number), `′ ″` (coordinates), `‡` (footnote double-dagger).
 - **Custom marks** for things Lucide doesn't cover well — license tier badges (`OPEN`, `OPEN-SA`, `NC`, `LINK-ONLY`), conflict markers (typographic, not pictographic — a small caps two-letter code like `WW1`, `WW2`, `KOR`, `VTN`), and item-type indicators. These are SVGs we own; live in `assets/marks/` *(folder not yet populated — to be added as marks are designed)*.
-- **The brand mark** (the Warpedia "W") is in [assets/logo/](docs/design/system/assets/logo/) — see [warpedia-mark.svg](docs/design/system/assets/logo/warpedia-mark.svg) and [warpedia-wordmark.svg](docs/design/system/assets/logo/warpedia-wordmark.svg). It's a typographic mark — capital W set in Source Serif 4 black, with a single hairline underscore. Not a shield, not a crossed-rifles, not a star. Typographic marks resist the militarist trope; they read as "press" or "imprint".
+- **The brand mark** (the Warpedia "W") is in [assets/logo/](docs/design/system/assets/logo/) — see [warpedia-mark.svg](https://jkentjnr.github.io/warpedia-mono/design/system/assets/logo/warpedia-mark.svg) and [warpedia-wordmark.svg](https://jkentjnr.github.io/warpedia-mono/design/system/assets/logo/warpedia-wordmark.svg). It's a typographic mark — capital W set in Source Serif 4 black, with a single hairline underscore. Not a shield, not a crossed-rifles, not a star. Typographic marks resist the militarist trope; they read as "press" or "imprint".
 
 ### Where icons appear
 
@@ -266,7 +268,7 @@ Warpedia inherits **no icon system** from the source repo (it's docs-only). The 
 
 ## Open caveats / things to validate
 
-- **Font substitutions.** Source Serif 4 ships in [fonts/](docs/design/system/fonts/) as a self-hosted variable TTF; Geist Sans and JetBrains Mono are sourced from Google Fonts CDN. If the user has actual brand fonts, swap them in [fonts/](docs/design/system/fonts/) and update the `@font-face` block in [colors_and_type.css](docs/design/system/colors_and_type.css).
+- **Font substitutions.** Source Serif 4 ships in [fonts/](docs/design/system/fonts/) as a self-hosted variable TTF; Geist Sans and JetBrains Mono are sourced from Google Fonts CDN. If the user has actual brand fonts, swap them in [fonts/](docs/design/system/fonts/) and update the `@font-face` block in [colors_and_type.css](docs/design/system/colors_and_type.css) (live: [hosted CSS](https://jkentjnr.github.io/warpedia-mono/design/system/colors_and_type.css)).
 - **Icon set substitution.** Lucide selected as a fit, not as a brand decision. Confirm or replace.
 - **Oxide accent hue.** I picked a muted brick (`#A8412A`). It carries gravitas without reading as a flag colour. If the user wants something cooler (a muted ink-blue) or fully neutral (no accent — pure ink-on-paper), it's a one-token change in [colors_and_type.css](docs/design/system/colors_and_type.css) (the `--oxide` and `--oxide-deep` custom properties).
 - **No primary-source imagery in the project.** The marketing/UI mockups use placeholder rectangles labelled with what should appear (e.g. *"AWM photo P02939.001 — 1st Bn AIF, Pozières, July 1916"*) rather than fabricated stand-ins. Real archival imagery requires a rights review the user must drive.
