@@ -19,6 +19,7 @@ Foundational research and design notes for warpedia.org — an open, primary-sou
 - [`metadata/taxonomies.md`](metadata/taxonomies.md) — controlled vocabularies referenced by the profile: item types, roles, conflicts, theatres, place types, rights statements, status.
 
 **Visual Design**
+- [`design/website-mockup-guide.md`](design/website-mockup-guide.md) — prescriptive guide for mocking up any new screen on warpedia.org: sitemap, top-level IA, URL strategy, page templates per entity type, faceted browse, hub pages, multi-perspective UI, sensitive-content rules, citation, accessibility, and the step-by-step mock-up workflow. Read this before drawing a new screen.
 - [`design/system/README.md`](design/system/README.md) — the Warpedia design system: brand context, voice, visual foundations (colour, type, spacing, motion), iconography, license-tier and AI-disclosure conventions. Source for everything below.
 - [`design/system/SKILL.md`](design/system/SKILL.md) — portable Claude Skill version of the system: the working agreement when designing a new screen.
 - [`design/system/colors_and_type.css`](design/system/colors_and_type.css) — all design tokens (color, type, spacing, radius, shadow, motion) as CSS custom properties + the `.wp-*` semantic component classes referenced by every UI kit.

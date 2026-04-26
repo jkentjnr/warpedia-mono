@@ -569,6 +569,76 @@ Editorial: new `wp:tag:` values require a PR — keeps the facet useful by preve
 
 ---
 
+## Perspective — `wp:perspective:`
+
+A two-axis facet recording **whose viewpoint an item represents**. Used to support the project's multi-perspective discipline as a UI surface (chip-row filter on Conflict / Event hubs) and as a search facet, not just an editorial principle. Applies to Items; recommended on every published Item where the perspective is determinable.
+
+The two axes are independent and orthogonal — an item carries zero, one, or both. Multi-valuation within an axis is allowed (a letter from a Belgian doctor in a German POW hospital is `voice:medical` + `voice:prisoner`).
+
+### Axis 1 — Side (`wp:perspective:side:`)
+
+Context-specific to the linked conflict. Curated, not free-tagged. Editors add new values per conflict via PR.
+
+WW1:
+- `wp:perspective:side:allied-ww1`
+- `wp:perspective:side:central-powers`
+- `wp:perspective:side:neutral-ww1`
+
+WW2:
+- `wp:perspective:side:allied-ww2`
+- `wp:perspective:side:axis`
+- `wp:perspective:side:neutral-ww2`
+- `wp:perspective:side:occupied`
+
+Cold War / post-1945 conflicts:
+- `wp:perspective:side:un-coalition`
+- `wp:perspective:side:warsaw-pact`
+- `wp:perspective:side:non-aligned`
+- `wp:perspective:side:national-liberation` (e.g. NLF/Viet Cong; intentionally separate from `warsaw-pact` to avoid conflation)
+- `wp:perspective:side:national-government` (the recognised state party in an internal conflict)
+
+Generic fallbacks (use only if no conflict-specific value fits):
+- `wp:perspective:side:other`
+- `wp:perspective:side:unknown`
+
+Editorial: do **not** use generic `allied` / `axis` without the conflict suffix. The Allied side of WW1 and the Allies of WW2 are not the same coalition; the values must say so.
+
+### Axis 2 — Voice (`wp:perspective:voice:`)
+
+Universal vocabulary, independent of conflict. The voice is *whose perspective the item represents*, which is usually but not always the same as the linked person's role.
+
+- `wp:perspective:voice:military` — combatant or uniformed service member, on duty.
+- `wp:perspective:voice:civilian` — non-combatant in their civilian capacity (a letter home from a war-factory worker).
+- `wp:perspective:voice:indigenous` — indigenous community member where indigeneity is materially relevant to the perspective (e.g. Anangu testimony on Maralinga, Inuit testimony on DEW Line).
+- `wp:perspective:voice:refugee` — displaced person speaking from displacement.
+- `wp:perspective:voice:prisoner` — prisoner of war.
+- `wp:perspective:voice:internee` — civilian internee.
+- `wp:perspective:voice:resistance` — partisan / underground / occupied-territory resistance.
+- `wp:perspective:voice:journalist` — accredited or independent press.
+- `wp:perspective:voice:photographer` — combat or civilian photographer (overlaps with journalist; both may be set).
+- `wp:perspective:voice:medical` — uniformed or civilian medical personnel speaking from that role.
+- `wp:perspective:voice:clergy` — chaplains, padres, civilian clergy in a war context.
+- `wp:perspective:voice:diplomatic` — diplomats, treaty negotiators, foreign-service personnel.
+- `wp:perspective:voice:official` — state, military, or institutional document speaking institutionally rather than personally (an after-action report, a gazette entry).
+- `wp:perspective:voice:commercial` — contractors, war-industry employees, merchant-marine.
+- `wp:perspective:voice:relief` — Red Cross, NGO, religious-aid relief workers.
+- `wp:perspective:voice:scholar` — historian or academic writing within scope (rare; mostly historiographical essays).
+
+Editorial: voice is **not** automatically derived from `wp:role:`. A serving officer writing a private letter home is `voice:civilian` if the letter is in their domestic capacity; a soldier's official report is `voice:official` even though `role:soldier`. Voice is what the *item* expresses, not who the *person* is.
+
+### Where the facet surfaces in UI
+
+- Conflict / Event hub chip-row filter — see [`docs/design/website-mockup-guide.md`](../design/website-mockup-guide.md) §4.2.
+- Browse left-rail facet (alongside Conflict, Item type, Licence).
+- Item-page metadata row — context, not a prominent badge.
+
+### Out of scope
+
+- The facet does **not** record political alignment, ideology, or moral judgement. "Pro-war / anti-war" is not a perspective value. The data records who the speaker was; readers draw inferences.
+- The facet is descriptive of the item, not normative. An item from `voice:civilian` is not assumed to be reliable, neutral, or representative — it is a category, not a credential.
+
+---
+
 ## Item status — `wp:status:`
 
 | Value | Meaning |
