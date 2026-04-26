@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Warpedia</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="colors_and_type.css">
+  <style>html, body { margin: 0; background: var(--paper); color: var(--ink); }</style>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script type="text/babel" src="shared.jsx"></script>
+  <script type="text/babel" src="site-chrome.jsx"></script>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="text/babel">
+    function App() {
+      return (
+        <>
+          <TopBar current="browse" />
+        <main style={{ padding: '64px 40px 80px', maxWidth: 1080, margin: '0 auto' }}>
+          <div className="wp-caption" style={{ marginBottom: 14 }}>Warpedia · v1 · pre-build research and design phase</div>
+          <h1 className="wp-display-xl" style={{ marginBottom: 16, maxWidth: '18ch' }}>An open catalogue of the primary record of war.</h1>
+          <p style={{ fontFamily: 'var(--serif)', fontSize: 21, lineHeight: '32px', color: 'var(--ink-2)', maxWidth: '52ch', margin: '0 0 28px', fontFeatureSettings: '"onum" 1' }}>
+            Letters, diaries, photographs, oral histories, after-action reports, manuals, and trial transcripts — catalogued at fidelity, mirrored to holding institutions, and surfaced under licences chosen by their creators or heirs.
+          </p>
+          <div style={{ display: 'flex', gap: 12, marginBottom: 56 }}>
+            <a href={ROUTES.browse} className="wp-btn wp-btn-primary">Browse the catalogue</a>
+            <a href="#" className="wp-btn wp-btn-secondary">Contribute a primary source</a>
+          </div>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', borderTop: '1px solid var(--ink-rule)', borderBottom: '1px solid var(--ink-rule)', marginBottom: 64 }}>
+            {[['Items catalogued', '142,418'], ['Conflicts covered', '38'], ['People named', '38,704'], ['Open-licensed', '88%']].map(([l, v]) => (
+              <div key={l} style={{ padding: '18px 20px 18px 0', borderRight: '1px solid var(--ink-rule)' }}>
+                <div className="wp-caption" style={{ marginBottom: 4 }}>{l}</div>
+                <div style={{ fontFamily: 'var(--serif)', fontWeight: 600, fontSize: 28, color: 'var(--ink)', fontFeatureSettings: '"onum" 1, "tnum" 1' }}>{v}</div>
+              </div>
+            ))}
+          </div>
+
+          <h2 className="wp-smallcaps" style={{ fontSize: 14, marginBottom: 18, fontFamily: 'var(--serif)', borderBottom: '2px solid var(--ink)', paddingBottom: 8 }}>Hub pages — design preview</h2>
+          <p className="wp-meta" style={{ marginBottom: 18 }}>
+            This is a static preview of seven catalogue surfaces. None of the data is live; the underlying catalogue does not yet exist. Real items, names, and dates are placeholders for evaluating the chrome and the editorial voice.
+          </p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 14 }}>
+            {[
+              [ROUTES.conflicts, 'Conflict',  'World War I',                                                'Featured items, sub-events, sides & voices facets'],
+              [ROUTES.event,     'Event',     'Liberation of Bergen-Belsen',                                'Sensitive-content treatment, mirror partners'],
+              [ROUTES.person,    'Person',    'Sister Eleanor Vasquez',                                     'Subject record · CAMC nursing sister, 1915–1919'],
+              [ROUTES.places,    'Place',     'Pozières',                                                   'Map block, linked events, cemeteries & memorials'],
+              [ROUTES.equipment, 'Equipment', 'Supermarine Spitfire Mk IIa',                                'Technical summary, manuals, operating units'],
+              [ROUTES.themes,    'Theme',     'Civilian voices from occupied territories',                  'Long-form essay; cross-conflict reading'],
+              [ROUTES.people,    'Hub index', '/people',                                                    'Browse 38,704 people · A→Z, faceted filters'],
+            ].map(([href, kind, label, desc]) => (
+              <a key={href} href={href} className="wp-card-catalogue" style={{ textDecoration: 'none', color: 'inherit', background: 'var(--paper-3)', display: 'block' }}>
+                <div className="wp-caption" style={{ marginBottom: 6 }}>{kind}</div>
+                <div style={{ fontFamily: 'var(--serif)', fontSize: 20, color: 'var(--ink)', fontWeight: 500, marginBottom: 6 }}>{label}</div>
+                <div className="wp-meta">{desc}</div>
+              </a>
+            ))}
+          </div>
+        </main>
+        <Footer />
+        </>
+      );
+    }
+    ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+  </script>
+</body>
+</html>

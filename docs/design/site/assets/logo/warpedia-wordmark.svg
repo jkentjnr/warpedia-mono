@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 76" role="img" aria-label="Warpedia">
+  
+  
+  <rect x="14" y="20" width="34" height="36" fill="#1A1714"></rect>
+  <text x="33.5" y="44" text-anchor="middle" style="font-family:&#39;JetBrains Mono&#39;,&#39;SF Mono&#39;,ui-monospace,monospace;font-weight:700;font-size:18px;fill:#F8F4EC;letter-spacing:0.04em;">WP</text>
+  
+  <line x1="14" y1="60" x2="48" y2="60" stroke="#A8412A" stroke-width="2"></line>
+
+  
+  <text x="58" y="44" style="font-family:&#39;JetBrains Mono&#39;,&#39;SF Mono&#39;,ui-monospace,monospace;font-weight:700;font-size:24px;fill:#1A1714;letter-spacing:0.10em;">WARPEDIA</text>
+  
+  <text x="58" y="60" style="font-family:&#39;JetBrains Mono&#39;,&#39;SF Mono&#39;,ui-monospace,monospace;font-weight:500;font-size:8px;fill:#5A4F44;letter-spacing:0.18em;">
+      ARCHIVE OF WAR / EST. MMXXVI / OPEN LICENCE
+  </text>
+</svg>

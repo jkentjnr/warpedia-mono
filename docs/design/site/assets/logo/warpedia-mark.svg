@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" role="img" aria-label="Warpedia mark">
+  
+  <rect x="6" y="6" width="68" height="68" fill="#1A1714"></rect>
+  
+  <text x="42.5" y="50" text-anchor="middle" style="font-family:&#39;JetBrains Mono&#39;,&#39;SF Mono&#39;,ui-monospace,monospace;font-weight:700;font-size:32px;fill:#F8F4EC;letter-spacing:0.04em;">WP</text>
+  
+  <line x1="6" y1="78" x2="74" y2="78" stroke="#A8412A" stroke-width="2.2"></line>
+</svg>
