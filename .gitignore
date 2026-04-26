@@ -1,0 +1,162 @@
+# ---------------------------------------------------------------------------
+# Operating system junk
+# ---------------------------------------------------------------------------
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+.fseventsd
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Linux
+*~
+.directory
+.Trash-*
+.nfs*
+
+# ---------------------------------------------------------------------------
+# Editors and IDEs
+# ---------------------------------------------------------------------------
+
+# JetBrains
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# VS Code (keep workspace settings shareable; ignore per-user state)
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/
+
+# Sublime
+*.sublime-project
+*.sublime-workspace
+
+# Vim / Emacs
+*.swp
+*.swo
+*.swn
+*.bak
+*.tmp
+\#*\#
+.\#*
+
+# ---------------------------------------------------------------------------
+# Node / JavaScript
+# ---------------------------------------------------------------------------
+
+node_modules/
+.pnp.*
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.npm/
+.eslintcache
+.parcel-cache/
+.next/
+.nuxt/
+.svelte-kit/
+.vite/
+dist/
+build/
+
+# ---------------------------------------------------------------------------
+# Python
+# ---------------------------------------------------------------------------
+
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+env/
+ENV/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+*.egg-info/
+.tox/
+
+# ---------------------------------------------------------------------------
+# Environment and secrets
+# ---------------------------------------------------------------------------
+
+.env
+.env.*
+!.env.example
+!.env.sample
+*.pem
+*.key
+secrets.json
+credentials.json
+
+# ---------------------------------------------------------------------------
+# Logs
+# ---------------------------------------------------------------------------
+
+*.log
+logs/
+
+# ---------------------------------------------------------------------------
+# Test, browser-automation, and tool artefacts
+# ---------------------------------------------------------------------------
+
+# Playwright (incl. the MCP server's local output dir we created during smoke testing)
+.playwright-mcp/
+playwright-report/
+test-results/
+playwright/.cache/
+
+# Cypress
+cypress/screenshots/
+cypress/videos/
+cypress/downloads/
+
+# Coverage
+coverage/
+
+# ---------------------------------------------------------------------------
+# Local-only / scratch
+# ---------------------------------------------------------------------------
+
+# Stray screenshots saved to the repo root from ad-hoc browser testing
+# (does NOT match docs/design/system/screenshots/*.png — those are tracked
+# design assets in a subdirectory)
+/*.png
+/*.jpg
+/*.jpeg
+/*.gif
+
+# Common scratch dirs
+/scratch/
+/tmp/
+/.tmp/
+.cache/
