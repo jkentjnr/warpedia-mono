@@ -13,10 +13,20 @@ Foundational research and design notes for warpedia.org — an open, primary-sou
 - [`research/manuals-and-reference.md`](research/manuals-and-reference.md) — adds technical / reference material (pilot's notes, field manuals, after-action reports) as a second content dimension alongside personal narrative.
 - [`research/content-dimensions.md`](research/content-dimensions.md) — comprehensive map of all content dimensions: casualty/commemoration, geospatial, propaganda, war art, POW/internment, war crimes, intelligence, treaties, underrepresented voices, etc.
 
-**Design**
+**Data Design**
 - [`data-model.md`](data-model.md) — first-cut entity model (Item, Person, Conflict, Event, Unit, Place, Collection, Contribution, Award, Cemetery, Camp, Memorial, Theme, Trial, Treaty).
 - [`metadata/dublin-core-profile.md`](metadata/dublin-core-profile.md) — formal Dublin Core Application Profile: which DCMI terms warpedia uses, with what cardinality and crosswalks (EDM, IIIF, schema.org).
 - [`metadata/taxonomies.md`](metadata/taxonomies.md) — controlled vocabularies referenced by the profile: item types, roles, conflicts, theatres, place types, rights statements, status.
+
+**Visual Design**
+- [`design/system/README.md`](design/system/README.md) — the Warpedia design system: brand context, voice, visual foundations (colour, type, spacing, motion), iconography, license-tier and AI-disclosure conventions. Source for everything below.
+- [`design/system/SKILL.md`](design/system/SKILL.md) — portable Claude Skill version of the system: the working agreement when designing a new screen.
+- [`design/system/colors_and_type.css`](design/system/colors_and_type.css) — all design tokens (color, type, spacing, radius, shadow, motion) as CSS custom properties + the `.wp-*` semantic component classes referenced by every UI kit.
+- UI kit prototypes (interactive React + Babel, served from GitHub Pages):
+  - [public website](https://jkentjnr.github.io/warpedia-mono/design/system/ui_kits/website/) — home, browse, item view, article. Source: [`design/system/ui_kits/website/`](design/system/ui_kits/website/).
+  - [contribution flow](https://jkentjnr.github.io/warpedia-mono/design/system/ui_kits/contribute/) — Sarah's 12-screen flow. Source: [`design/system/ui_kits/contribute/`](design/system/ui_kits/contribute/).
+  - [editorial review queue](https://jkentjnr.github.io/warpedia-mono/design/system/ui_kits/editorial/) — curator workbench. Source: [`design/system/ui_kits/editorial/`](design/system/ui_kits/editorial/).
+- The full rendered system, including token-preview cards, lives at **[jkentjnr.github.io/warpedia-mono](https://jkentjnr.github.io/warpedia-mono/)**.
 
 **Infrastructure**
 - [`infrastructure/storage.md`](infrastructure/storage.md) — four-tier storage architecture: self-owned deep archive (Glacier), warm working master (B2), CDN-fronted hot tier (R2), and free public-preservation mirrors (Internet Archive, Wikimedia Commons). With cost projections and a worked end-to-end example.
