@@ -226,6 +226,7 @@ Captured here so they don't sneak into v1 by accident:
 
 ## See also
 
+- [`sample-data.md`](sample-data.md) — fictional cast and canonical sample copy for filling these templates in mock-ups.
 - [`docs/charter.md`](../charter.md) — what Warpedia is and is not. The anchor.
 - [`docs/data-model.md`](../data-model.md) — entity shapes referenced throughout this guide.
 - [`docs/metadata/taxonomies.md`](../metadata/taxonomies.md) — every controlled vocabulary used by the page templates.
